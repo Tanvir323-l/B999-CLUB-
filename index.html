@@ -10,6 +10,7 @@
     <meta property="og:url" content="https://tanvir323-l.github.io/B999-CLUB-/">
     
     <link rel="icon" type="image/png" href="https://img.icons8.com/external-flat-icons-inmotus-design/67/external-B-alphabet-flat-icons-inmotus-design-2.png">
+    <link rel="apple-touch-icon" href="https://img.icons8.com/external-flat-icons-inmotus-design/192/external-B-alphabet-flat-icons-inmotus-design-2.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -17,41 +18,47 @@
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js"></script>
 
     <style>
-        :root { --primary: #8e2de2; --secondary: #4a00e0; --accent: #00f2fe; --card-bg: #1e293b; }
-        body { background-color: #020617; color: white; font-family: sans-serif; -webkit-tap-highlight-color: transparent; }
-        .gradient-main { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); }
-        .tab-active { color: white !important; background: var(--primary) !important; border-radius: 12px; }
-        .mode-btn-active { background-color: var(--primary) !important; border: 2px solid var(--accent) !important; }
-        
-        /* Popup Styles */
-        #bet-popup, #deposit-popup, #withdraw-popup { 
-            position: fixed; bottom: 0; left: 0; width: 100%; z-index: 5000; 
-            background: var(--card-bg); border-radius: 25px 25px 0 0; 
-            transform: translateY(100%); transition: 0.3s ease; visibility: hidden;
+        :root { 
+            --primary: #8e2de2; --secondary: #4a00e0; --accent: #00f2fe; --card-bg: #1e293b; --text-light: #f1f5f9;
+            --hgzy-gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
         }
-        .show-popup { transform: translateY(0) !important; visibility: visible !important; }
+        body { background-color: #020617; color: var(--text-light); font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; user-select: none; }
+        .gradient-main { background: var(--hgzy-gradient); }
+        .tab-active { color: white !important; background: var(--primary) !important; border-radius: 12px 12px 0 0; }
+        .mode-btn { background-color: var(--card-bg); border: 1px solid #334155; }
+        .mode-btn-active { background-color: var(--primary) !important; border: 2px solid var(--accent) !important; transform: scale(1.05); }
+        #bet-popup, #deposit-popup, #withdraw-popup, #history-modal { background: var(--card-bg); border-radius: 25px 25px 0 0; border-top: 1px solid rgba(255,255,255,0.1); }
+        
+        /* Animation & Popup */
+        #bet-popup { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 5000; transition: 0.3s ease-in-out; transform: translateY(100%); visibility: hidden; }
+        .popup-open { transform: translateY(0) !important; visibility: visible !important; }
         #overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 4000; display: none; }
+
+        /* Win Popup */
+        #win-popup-wrapper { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,0.85); z-index: 10000; }
+        .win-box { background: linear-gradient(180deg, #ffde6a 0%, #ff8a00 100%); width: 85%; max-width: 320px; border-radius: 30px; text-align: center; padding: 30px; animation: zoomIn 0.4s; }
+        @keyframes zoomIn { from {transform: scale(0.5); opacity: 0;} to {transform: scale(1); opacity: 1;} }
     </style>
 </head>
-<body class="pb-20">
+<body class="pb-24">
 
-    <div id="auth-screen" class="fixed inset-0 bg-[#020617] z-[9999] flex items-center justify-center p-5">
-        <div class="bg-[#1e293b] w-full max-w-sm p-8 rounded-[35px] border border-white/10 shadow-2xl">
-            <h1 class="text-3xl font-black italic text-center mb-8 uppercase">B999 <span class="text-[--accent]">CLUB</span></h1>
+    <div id="auth-screen" class="fixed inset-0 bg-[#020617] z-[9999] flex flex-col items-center justify-center p-5">
+        <div class="bg-[#1e293b] w-full max-w-[400px] p-8 rounded-[35px] border border-white/10 shadow-2xl">
+            <h1 class="text-3xl font-black italic text-center mb-8 uppercase text-white">B999 <span class="text-[--accent]">CLUB</span></h1>
             
             <div id="login-form">
-                <input type="number" id="auth-phone" placeholder="Phone Number" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-3 outline-none focus:border-[--primary]">
-                <input type="password" id="auth-pass" placeholder="Password" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-4 outline-none focus:border-[--primary]">
-                <button onclick="handleAuth('login')" class="w-full gradient-main py-4 rounded-2xl font-bold shadow-lg">LOGIN</button>
-                <p class="text-center mt-4 text-sm text-gray-400">New here? <span onclick="toggleAuth()" class="text-[--accent] font-bold cursor-pointer">Register Now</span></p>
+                <input type="number" id="auth-phone" placeholder="Phone Number" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-3 outline-none text-white focus:border-[--primary]">
+                <input type="password" id="auth-pass" placeholder="Password" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-4 outline-none text-white focus:border-[--primary]">
+                <button onclick="handleAuth('login')" id="login-btn" class="w-full gradient-main py-4 rounded-2xl font-black text-white shadow-lg uppercase tracking-wider">LOGIN</button>
+                <p class="text-center mt-5 text-sm text-gray-400">Don't have an account? <span onclick="toggleAuth()" class="text-[--accent] font-bold cursor-pointer underline">Register</span></p>
             </div>
 
             <div id="register-form" class="hidden">
-                <input type="number" id="reg-phone" placeholder="Phone Number" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-3 outline-none focus:border-[--primary]">
-                <input type="password" id="reg-pass" placeholder="Set Password" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-3 outline-none focus:border-[--primary]">
-                <input type="password" id="reg-confirm" placeholder="Confirm Password" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-4 outline-none focus:border-[--primary]">
-                <button onclick="handleAuth('register')" class="w-full bg-green-600 py-4 rounded-2xl font-bold shadow-lg">REGISTER</button>
-                <p class="text-center mt-4 text-sm text-gray-400">Have an account? <span onclick="toggleAuth()" class="text-[--accent] font-bold cursor-pointer">Login</span></p>
+                <input type="number" id="reg-phone" placeholder="Phone Number" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-3 outline-none text-white">
+                <input type="password" id="reg-pass" placeholder="Set Password" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-3 outline-none text-white">
+                <input type="password" id="reg-confirm" placeholder="Confirm Password" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-4 outline-none text-white">
+                <button onclick="handleAuth('register')" class="w-full bg-green-600 py-4 rounded-2xl font-black text-white shadow-lg uppercase">REGISTER</button>
+                <p class="text-center mt-5 text-sm text-gray-400">Already have an account? <span onclick="toggleAuth()" class="text-[--accent] font-bold cursor-pointer underline">Login</span></p>
             </div>
         </div>
     </div>
@@ -59,209 +66,81 @@
     <div id="game-content" style="display: none;">
         <div id="overlay" onclick="closePopups()"></div>
 
+        <div id="win-popup-wrapper">
+            <div class="win-box">
+                <div class="text-6xl mb-4">🏆</div>
+                <h1 class="text-2xl font-black text-white">Congratulations</h1>
+                <div class="text-4xl font-black text-white my-4">৳<span id="win-amount-text">0.00</span></div>
+                <button onclick="closeWinPopup()" class="bg-white text-orange-500 font-black px-10 py-3 rounded-full mt-4">CLOSE</button>
+            </div>
+        </div>
+
         <div class="gradient-main p-6 rounded-b-[45px] shadow-xl">
-            <div class="flex justify-between items-center mb-6">
-                <button onclick="logout()" class="p-2"><i class="fa-solid fa-power-off text-xl"></i></button>
-                <h1 class="text-2xl font-black italic italic tracking-tighter uppercase">B999 <span class="text-[--accent]">CLUB</span></h1>
+            <div class="flex justify-between items-center mb-6 px-2 text-white">
+                <button onclick="logout()"><i class="fa-solid fa-power-off text-xl"></i></button>
+                <h1 class="text-2xl font-black italic tracking-tighter uppercase">B999 <span class="text-[--accent]">CLUB</span></h1>
                 <i class="fa-solid fa-headset text-xl"></i>
             </div>
             <div class="bg-[#1e293b] rounded-[30px] p-6 text-center border border-white/10">
-                <p class="text-xs text-gray-400 font-bold uppercase mb-1">Total Balance</p>
-                <div class="text-4xl font-black mb-6">৳<span id="user-balance">0.00</span></div>
+                <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">Total Balance</p>
+                <div class="text-4xl font-black text-white mb-6">৳<span id="user-balance">0.00</span></div>
                 <div class="flex gap-4">
-                    <button onclick="openWithdraw()" class="flex-1 bg-slate-800 py-3 rounded-2xl font-bold">Withdraw</button>
-                    <button onclick="openDeposit()" class="flex-1 gradient-main py-3 rounded-2xl font-bold">Deposit</button>
+                    <button onclick="alert('Withdraw System Loading...')" class="flex-1 bg-slate-800 py-3.5 rounded-2xl font-bold text-slate-300">Withdraw</button>
+                    <button onclick="alert('Deposit System Loading...')" class="flex-1 gradient-main py-3.5 rounded-2xl font-bold text-white">Deposit</button>
                 </div>
             </div>
         </div>
 
-        <div class="bg-[#1e293b] mx-4 mt-6 rounded-3xl p-5 flex justify-between items-center border border-white/5">
+        <div class="grid grid-cols-4 gap-2 p-4 mt-2">
+            <button onclick="switchMode('30s')" id="btn-30s" class="mode-btn rounded-2xl p-3 flex flex-col items-center"><p class="text-[10px] font-bold">30s</p></button>
+            <button onclick="switchMode('1m')" id="btn-1m" class="mode-btn mode-btn-active rounded-2xl p-3 flex flex-col items-center"><p class="text-[10px] font-bold">1m</p></button>
+            <button onclick="switchMode('3m')" id="btn-3m" class="mode-btn rounded-2xl p-3 flex flex-col items-center"><p class="text-[10px] font-bold">3m</p></button>
+            <button onclick="switchMode('5m')" id="btn-5m" class="mode-btn rounded-2xl p-3 flex flex-col items-center"><p class="text-[10px] font-bold">5m</p></button>
+        </div>
+
+        <div class="gradient-main mx-4 rounded-3xl p-5 shadow-xl flex justify-between items-center border border-white/10">
             <div>
-                <p id="display-mode" class="text-[10px] font-bold text-blue-400 uppercase">Win Go 1m</p>
-                <p id="current-period" class="text-lg font-mono font-bold">Loading...</p>
+                <p id="display-mode-label" class="text-[10px] font-bold text-blue-100 uppercase mb-1">Win Go 1m</p>
+                <p id="current-period" class="text-lg font-bold tracking-tight text-white">Loading...</p>
             </div>
-            <div class="text-right border-l border-white/10 pl-5">
-                <p class="text-[10px] font-bold text-gray-400 mb-1">TIME LEFT</p>
-                <div class="text-3xl font-black text-[--accent]" id="timer-display">00:00</div>
+            <div class="text-right border-l border-white/20 pl-5">
+                <p class="text-[10px] font-bold text-blue-100 mb-1">TIME LEFT</p>
+                <div class="font-mono text-4xl font-black text-white" id="timer-display">00:00</div>
             </div>
         </div>
 
         <div class="p-4 grid grid-cols-3 gap-3">
-            <button onclick="openBet('Green', '#10b981')" class="bg-green-500 py-4 rounded-2xl font-black">Green</button>
-            <button onclick="openBet('Violet', '#8b5cf6')" class="bg-purple-500 py-4 rounded-2xl font-black">Violet</button>
-            <button onclick="openBet('Red', '#ef4444')" class="bg-red-500 py-4 rounded-2xl font-black">Red</button>
+            <button onclick="openBet('Green', '#10b981')" class="bg-green-500 py-4 rounded-2xl font-black text-white shadow-lg">Green</button>
+            <button onclick="openBet('Violet', '#8b5cf6')" class="bg-purple-500 py-4 rounded-2xl font-black text-white shadow-lg">Violet</button>
+            <button onclick="openBet('Red', '#ef4444')" class="bg-red-500 py-4 rounded-2xl font-black text-white shadow-lg">Red</button>
         </div>
 
         <div class="px-4">
-            <div class="bg-slate-900 rounded-2xl flex p-1">
+            <div class="bg-slate-900 rounded-t-2xl flex p-1">
                 <button onclick="switchTab('my')" id="tab-my" class="flex-1 p-3 font-bold tab-active">My History</button>
-                <button onclick="switchTab('records')" id="tab-records" class="flex-1 p-3 font-bold text-gray-400">Game Records</button>
+                <button onclick="switchTab('records')" id="tab-records" class="flex-1 p-3 font-bold text-gray-400">Records</button>
             </div>
-            <div id="content-my" class="mt-2 bg-[#1e293b] rounded-2xl min-h-[200px] overflow-hidden">
-                <table class="w-full text-center text-xs">
+            <div id="content-my" class="bg-[#1e293b] min-h-[250px] rounded-b-2xl overflow-hidden border border-white/5">
+                <table class="w-full text-center text-[11px]">
                     <thead class="bg-black/20 text-gray-400"><tr><th class="p-3">Period</th><th class="p-3">Pick</th><th class="p-3">Amount</th><th class="p-3">Status</th></tr></thead>
                     <tbody id="my-history-body"></tbody>
                 </table>
             </div>
-            <div id="content-records" class="hidden mt-2 bg-[#1e293b] rounded-2xl min-h-[200px] overflow-hidden">
+            <div id="content-records" class="hidden bg-[#1e293b] min-h-[250px] rounded-b-2xl overflow-hidden">
                 <table class="w-full text-center text-xs">
-                    <thead class="bg-black/20 text-gray-400"><tr><th class="p-3">Period</th><th class="p-3">Number</th><th class="p-3">Size</th></tr></thead>
+                    <thead class="bg-black/20 text-gray-400"><tr><th class="p-3">Period</th><th class="p-3">Num</th><th class="p-3">Size</th></tr></thead>
                     <tbody id="records-body"></tbody>
                 </table>
             </div>
         </div>
 
         <div id="bet-popup">
-            <div id="pop-header" class="p-5 text-center font-bold rounded-t-2xl">
-                WIN GO: <span id="popup-selection" class="underline">?</span>
+            <div id="pop-header" class="p-5 text-center font-black text-white uppercase tracking-widest">
+                SELECT: <span id="popup-selection">?</span>
             </div>
-            <div class="p-6 space-y-5">
-                <div class="flex justify-between">
-                    <span>Amount</span>
+            <div class="p-6 space-y-6">
+                <div class="flex justify-between items-center">
+                    <span class="font-bold">Unit Amount</span>
                     <div class="flex gap-2">
-                        <button onclick="setBase(10)" class="bg-slate-700 px-3 py-1 rounded">10</button>
-                        <button onclick="setBase(100)" class="bg-slate-700 px-3 py-1 rounded">100</button>
-                    </div>
-                </div>
-                <button onclick="confirmBet()" id="confirm-btn" class="w-full py-4 rounded-2xl font-bold text-lg">Confirm ৳<span id="total-bet-text">10</span></button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Firebase Configuration (Encrypted)
-        const firebaseConfig = {
-            apiKey: atob("QUl6YVN5QkxGb0o0LXY1V0FwYjFGbGc4Y0VyZnFialc2NFhLaC1J"),
-            authDomain: atob("YmV0LXdpbi04NGQzNS5maXJlYmFzZWFwcC5jb20="),
-            databaseURL: atob("aHR0cHM6Ly9iZXQtd2luLTg0ZDM1LWRlZmF1bHQtcnRkYi5maXJlYmFzZWlvLmNvbQ=="),
-            projectId: atob("YmV0LXdpbi04NGQzNS4="),
-            storageBucket: atob("YmV0LXdpbi04NGQzNS5maXJlYmFzZWFwcC5jb20="),
-            messagingSenderId: atob("NTAxMzQ1NjU1Ng=="),
-            appId: atob("MTo1MDEzNDU2NTU2OndlYjo0YTViMWYyYmRkNzI4YTI2NTYwMTA5")
-        };
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.database();
-
-        let userPhone = localStorage.getItem('userPhone');
-        let balance = 0, currentPeriod = "", selectedPick = "", baseAmount = 10;
-
-        // --- Auth Functions ---
-        async function handleAuth(type) {
-            const phone = document.getElementById(type === 'login' ? 'auth-phone' : 'reg-phone').value;
-            const pass = document.getElementById(type === 'login' ? 'auth-pass' : 'reg-pass').value;
-
-            if(!phone || !pass) return alert("সব তথ্য দিন");
-
-            const ref = db.ref('users/' + phone);
-            const snap = await ref.once('value');
-
-            if(type === 'register') {
-                if(snap.exists()) return alert("এই নাম্বার অলরেডি আছে");
-                await ref.set({ password: pass, balance: 88 });
-                alert("রেজিস্ট্রেশন সফল! ৮৮ টাকা বোনাস দেওয়া হয়েছে।");
-                completeLogin(phone);
-            } else {
-                if(snap.exists() && snap.val().password === pass) completeLogin(phone);
-                else alert("ভুল নাম্বার বা পাসওয়ার্ড");
-            }
-        }
-
-        function completeLogin(phone) {
-            userPhone = phone;
-            localStorage.setItem('userPhone', phone);
-            document.getElementById('auth-screen').style.display = 'none';
-            document.getElementById('game-content').style.display = 'block';
-            startApp();
-        }
-
-        function toggleAuth() {
-            document.getElementById('login-form').classList.toggle('hidden');
-            document.getElementById('register-form').classList.toggle('hidden');
-        }
-
-        function logout() { localStorage.removeItem('userPhone'); location.reload(); }
-
-        // --- Game Logic ---
-        function startApp() {
-            db.ref(`users/${userPhone}/balance`).on('value', s => {
-                balance = s.val() || 0;
-                document.getElementById('user-balance').innerText = balance.toFixed(2);
-            });
-            updateTimer();
-            setInterval(updateTimer, 1000);
-            loadMyHistory();
-        }
-
-        async function updateTimer() {
-            const now = Math.floor(Date.now() / 1000);
-            const timeLeft = 60 - (now % 60);
-            document.getElementById('timer-display').innerText = `00:${timeLeft < 10 ? '0'+timeLeft : timeLeft}`;
-            
-            // Generate Period ID (Dummy for UI)
-            const pId = new Date().toISOString().replace(/[-T:Z.]/g, "").slice(0, 12);
-            currentPeriod = pId;
-            document.getElementById('current-period').innerText = pId;
-        }
-
-        function openBet(pick, color) {
-            selectedPick = pick;
-            document.getElementById('popup-selection').innerText = pick;
-            document.getElementById('pop-header').style.backgroundColor = color;
-            document.getElementById('confirm-btn').style.backgroundColor = color;
-            document.getElementById('bet-popup').classList.add('show-popup');
-            document.getElementById('overlay').style.display = 'block';
-        }
-
-        async function confirmBet() {
-            if(balance < baseAmount) return alert("ব্যালেন্স নেই");
-            
-            await db.ref(`users/${userPhone}`).update({ balance: balance - baseAmount });
-            await db.ref(`users/${userPhone}/bet_history`).push({
-                period: currentPeriod,
-                pick: selectedPick,
-                amount: baseAmount,
-                status: 'Pending'
-            });
-            alert("বেট সফল হয়েছে!");
-            closePopups();
-        }
-
-        function closePopups() {
-            document.getElementById('bet-popup').classList.remove('show-popup');
-            document.getElementById('overlay').style.display = 'none';
-        }
-
-        function setBase(amt) {
-            baseAmount = amt;
-            document.getElementById('total-bet-text').innerText = amt;
-        }
-
-        function switchTab(t) {
-            document.getElementById('content-my').classList.add('hidden');
-            document.getElementById('content-records').classList.add('hidden');
-            document.getElementById('tab-my').classList.remove('tab-active');
-            document.getElementById('tab-records').classList.remove('tab-active');
-
-            document.getElementById('content-' + t).classList.remove('hidden');
-            document.getElementById('tab-' + t).classList.add('tab-active');
-        }
-
-        function loadMyHistory() {
-            db.ref(`users/${userPhone}/bet_history`).limitToLast(10).on('value', s => {
-                let html = "";
-                s.forEach(c => {
-                    const d = c.val();
-                    html = `<tr class="border-b border-white/5"><td class="p-3">${d.period.slice(-4)}</td><td class="p-3">${d.pick}</td><td class="p-3">৳${d.amount}</td><td class="p-3 text-orange-400">${d.status}</td></tr>` + html;
-                });
-                document.getElementById('my-history-body').innerHTML = html || "<tr><td colspan='4' class='p-5'>No History</td></tr>";
-            });
-        }
-
-        function openDeposit() { alert("বিকাশ/নগদ ডিপোজিট সিস্টেম লোড হচ্ছে..."); }
-        function openWithdraw() { alert("উইথড্র সিস্টেম লোড হচ্ছে..."); }
-
-        // Initial Load
-        window.onload = () => { if(userPhone) completeLogin(userPhone); };
-    </script>
-</body>
-</html>
+                        <button onclick="setBase(10)" class="bg-slate-700 px-4 py-2 rounded-lg font-bold">10</button>
+                        <button onclick="setBase(100)" class="bg-slate-700 px-4 py-2 rounded-lg
