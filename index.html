@@ -1,123 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="title" content="B999 CLUB | Win Go Official Prediction Game">
-<meta name="description" content="B999 CLUB - বাংলাদেশের সেরা প্রেডিকশন এবং গেমিং প্ল্যাটফর্ম। এখনই জয়েন করুন।">
-<meta name="keywords" content="B999 CLUB, B999, Win Go, Trader Group, Tanvir, Online Income Bangladesh">
-
-<meta name="title" content="B999 CLUB | Win Go Official Gaming Platform">
-<meta name="description" content="B999 CLUB এ জয়েন করুন এবং সেরা অনলাইন গেমিং অভিজ্ঞতা উপভোগ করুন। এটি একটি নির্ভরযোগ্য এবং প্রফেশনাল প্ল্যাটফর্ম।">
-<meta name="keywords" content="B999 CLUB, Win Go, Trader Group, Tanvir, Online Game, B999, Prediction Game">
-<meta name="robots" content="index, follow">
-<meta name="language" content="Bengali">
-<meta name="author" content="Tanvir">
-
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://tanvir323-l.github.io/B999-CLUB-/">
-<meta property="og:title" content="B999 CLUB | Win Go Official">
-<meta property="og:description" content="অনলাইনে গেম খেলে বিনোদন এবং প্রেডিকশনের সেরা প্ল্যাটফর্ম।">
-<meta property="og:image" content="https://img.icons8.com/external-flat-icons-inmotus-design/67/external-B-alphabet-flat-icons-inmotus-design-2.png">
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>B999 CLUB | Win Go Official</title>
     
-    <link rel="icon" type="image/png" href="https://img.icons8.com/external-flat-icons-inmotus-design/67/external-B-alphabet-flat-icons-inmotus-design-2.png">
+    <title>B999 CLUB ফাস্ট ডিপোজিটে ১০০% বোনাস | Win Go Official</title>
+    <meta name="title" content="B999 CLUB | Win Go Official Gaming Platform">
+    <meta name="description" content="B999 CLUB - অনলাইনে গেম খেলে বিনোদন এবং প্রেডিকশনের সেরা প্ল্যাটফর্ম। এটি বাংলাদেশের একটি নির্ভরযোগ্য গেমিং সাইট।">
+    <meta name="keywords" content="B999 CLUB, B999, Win Go, Trader Group, Tanvir, Prediction Game, Online Game Bangladesh">
+    <meta name="author" content="Tanvir">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="MER1FOqqinjyoHCT9SyUifz5CbPb3r6Qks7eExku3f8" />
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tanvir323-l.github.io/B999-CLUB-/">
+    <meta property="og:title" content="B999 CLUB | Win Go Official">
+    <meta property="og:description" content="B999 CLUB - অনলাইনে গেম খেলে বিনোদন এবং প্রেডিকশনের সেরা প্ল্যাটফর্ম।">
+    <meta property="og:image" content="https://i.ibb.co.com/4wY4hx1C/1776310647821.png">
+    <meta name="twitter:image" content="https://i.ibb.co.com/4wY4hx1C/1776310647821.png">
+
+    <link rel="icon" type="image/png" href="https://i.ibb.co.com/4wY4hx1C/1776310647821.png">
+    <link rel="apple-touch-icon" href="https://i.ibb.co.com/4wY4hx1C/1776310647821.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js"></script>
 
     <style>
         :root { 
-            --primary: #8e2de2; --secondary: #4a00e0; --accent: #00f2fe; --card-bg: #1e293b; --text-light: #f1f5f9;
+            --primary: #8e2de2; 
+            --secondary: #4a00e0;
+            --accent: #00f2fe;
+            --dark-bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-light: #f1f5f9;
             --hgzy-gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
         }
-        body { background-color: #020617; color: var(--text-light); font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; user-select: none; }
+        body { 
+            background-color: #020617; 
+            color: var(--text-light); 
+            font-family: 'Inter', sans-serif; 
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
         .gradient-main { background: var(--hgzy-gradient); }
         .tab-active { color: white !important; background: var(--primary) !important; border-radius: 12px 12px 0 0; }
-        .custom-modal { background: var(--card-bg); border-radius: 30px 30px 0 0; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .modal-open { transform: translateY(0) !important; visibility: visible !important; }
-        .history-page { position: fixed; inset: 0; background: #020617; z-index: 6000; transform: translateX(100%); transition: 0.3s; }
-        .page-open { transform: translateX(0); }
-        .result-popup { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0); z-index: 10000; transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); width: 85%; max-width: 320px; }
-        .result-open { transform: translate(-50%, -50%) scale(1); }
-        #lock-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 50; border-radius: 24px; backdrop-filter: blur(2px); font-black; text-xl; }
+        .mode-btn { background-color: var(--card-bg); border: 1px solid #334155; }
+        .mode-btn-active { background-color: var(--primary) !important; border: 2px solid var(--accent) !important; transform: scale(1.05); }
+        #bet-popup, .custom-modal, .history-page { background: var(--card-bg); border-radius: 25px 25px 0 0; transition: 0.3s; }
+        .btn-val.active { background: var(--primary); color: white; border-color: var(--accent); }
+        .bet-lock-overlay { background: rgba(15, 23, 42, 0.9); z-index: 100; }
+        
+        .history-page {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4000;
+            background: #020617;
+            transform: translateX(100%);
+            transition: 0.3s;
+            overflow-y: auto;
+        }
+        .history-page.active { transform: translateX(0); }
+
+        .result-popup { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.7); z-index: 5000; display: none; transition: 0.3s; }
+        .result-popup.show { display: block; transform: translate(-50%, -50%) scale(1); }
+        
+        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
     </style>
 </head>
 <body class="pb-24">
+    <div id="toast-msg" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; padding: 15px 30px; border-radius: 50px; z-index: 9999; display: none; font-weight: bold; background: #1e293b; border: 1px solid var(--primary);"></div>
 
-    <div id="auth-screen">
-        <div class="fixed inset-0 bg-[#020617] z-[99999] flex flex-col items-center justify-center p-5">
-            <div class="bg-[#1e293b] w-full max-w-[400px] p-8 rounded-[35px] border border-white/10 shadow-2xl">
-                <h1 class="text-3xl font-black italic text-center mb-8 uppercase text-white">B999 <span class="text-[--accent]">CLUB</span></h1>
-                <div id="login-form">
-                    <input type="number" id="auth-phone" placeholder="Phone Number" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-3 outline-none text-white">
-                    <input type="password" id="auth-pass" placeholder="Password" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-4 outline-none text-white">
-                    <button onclick="handleAuth('login')" class="w-full gradient-main py-4 rounded-2xl font-black text-white shadow-lg uppercase">LOGIN</button>
-                    <p class="text-center mt-5 text-sm text-gray-400">Don't have an account? <span onclick="toggleAuth()" class="text-[--accent] font-bold cursor-pointer">Register</span></p>
-                </div>
-                <div id="register-form" class="hidden">
-                    <input type="number" id="reg-phone" placeholder="Phone Number" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-3 outline-none text-white">
-                    <input type="password" id="reg-pass" placeholder="Set Password" class="w-full bg-[#0f172a] border border-slate-700 p-4 rounded-2xl mb-4 outline-none text-white">
-                    <button onclick="handleAuth('register')" class="w-full bg-green-600 py-4 rounded-2xl font-black text-white shadow-lg uppercase">REGISTER</button>
-                    <p class="text-center mt-5 text-sm text-gray-400">Already have an account? <span onclick="toggleAuth()" class="text-[--accent] font-bold cursor-pointer">Login</span></p>
-                </div>
+    <div class="gradient-main p-5 rounded-b-[40px] shadow-lg">
+        <div class="flex justify-between items-center mb-6 text-white px-2">
+            <button onclick="window.history.back()"><i class="fa-solid fa-chevron-left text-lg"></i></button>
+            <h1 class="text-2xl font-black italic tracking-tighter uppercase">B999 <span class="text-[--accent]">CLUB</span></h1>
+            <i class="fa-solid fa-headphones-simple"></i>
+        </div>
+        <div style="background: var(--card-bg);" class="rounded-[30px] p-6 shadow-2xl text-center border border-white/10">
+            <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">Available Balance</p>
+            <div class="text-4xl font-black text-white mb-6 flex justify-center items-center gap-2">
+                <span class="text-[--accent]">৳</span><span id="user-balance">0.00</span>
+            </div>
+            <div class="flex gap-4">
+                <button onclick="openWithdraw()" class="flex-1 bg-slate-800 text-slate-300 font-bold py-3.5 rounded-2xl">Withdraw</button>
+                <button onclick="openDeposit()" class="flex-1 gradient-main text-white font-bold py-3.5 rounded-2xl shadow-lg">Deposit</button>
+            </div>
+            <div class="flex gap-4 mt-3">
+                <button onclick="toggleHistoryPage('withdraw')" class="flex-1 text-[10px] text-gray-400 font-bold uppercase border border-white/5 py-2 rounded-xl">Withdraw Hist.</button>
+                <button onclick="toggleHistoryPage('deposit')" class="flex-1 text-[10px] text-gray-400 font-bold uppercase border border-white/5 py-2 rounded-xl">Deposit Hist.</button>
             </div>
         </div>
     </div>
 
-    <div id="game-content" style="display: none;">
-        <div id="overlay" onclick="closePopups()" class="fixed inset-0 bg-black/70 z-[2000] hidden"></div>
+    <div class="grid grid-cols-4 gap-2 p-4">
+        <button onclick="switchMode('30s')" id="btn-30s" class="mode-btn rounded-2xl p-3 flex flex-col items-center">
+            <i class="fa-solid fa-clock mb-1"></i><p class="text-[10px] font-bold">30s</p>
+        </button>
+        <button onclick="switchMode('1m')" id="btn-1m" class="mode-btn mode-btn-active rounded-2xl p-3 flex flex-col items-center">
+            <i class="fa-solid fa-clock mb-1"></i><p class="text-[10px] font-bold">1m</p>
+        </button>
+        <button onclick="switchMode('3m')" id="btn-3m" class="mode-btn rounded-2xl p-3 flex flex-col items-center">
+            <i class="fa-solid fa-clock mb-1"></i><p class="text-[10px] font-bold">3m</p>
+        </button>
+        <button onclick="switchMode('5m')" id="btn-5m" class="mode-btn rounded-2xl p-3 flex flex-col items-center">
+            <i class="fa-solid fa-clock mb-1"></i><p class="text-[10px] font-bold">5m</p>
+        </button>
+    </div>
 
-        <div id="win-popup" class="result-popup bg-slate-800 p-8 rounded-3xl border-4 border-yellow-500 text-center shadow-2xl">
-            <i class="fa-solid fa-trophy text-6xl text-yellow-400 mb-4"></i>
-            <h2 class="text-3xl font-black text-white">CONGRATS!</h2>
-            <p class="text-lg mt-2">You Won: ৳<span id="win-amt-display">0</span></p>
-            <button onclick="hideResults()" class="mt-6 bg-yellow-500 px-8 py-2 rounded-full font-bold text-black">Collect</button>
+    <div class="gradient-main mx-4 rounded-3xl p-5 shadow-xl flex justify-between items-center relative overflow-hidden">
+        <div>
+            <p id="display-mode-label" class="text-[10px] font-bold text-blue-100 uppercase mb-2">Win Go 1m</p>
+            <p id="current-period" class="text-lg font-bold tracking-tighter text-white">Loading...</p>
         </div>
-
-        <div id="loss-popup" class="result-popup bg-slate-800 p-8 rounded-3xl border-4 border-red-500 text-center shadow-2xl">
-            <i class="fa-solid fa-face-frown text-6xl text-red-500 mb-4"></i>
-            <h2 class="text-3xl font-black text-white">LOST!</h2>
-            <p class="text-lg mt-2">Try Again Next Time</p>
-            <button onclick="hideResults()" class="mt-6 bg-red-500 px-8 py-2 rounded-full font-bold text-white">Close</button>
-        </div>
-
-        <div class="gradient-main p-6 rounded-b-[45px] shadow-xl">
-            <div class="flex justify-between items-center mb-6 px-2 text-white">
-                <button onclick="logout()"><i class="fa-solid fa-power-off text-xl"></i></button>
-                <h1 class="text-2xl font-black italic tracking-tighter uppercase">B999 <span class="text-[--accent]">CLUB</span></h1>
-                <div class="flex gap-4">
-                    <button onclick="toggleHistoryPage('deposit')"><i class="fa-solid fa-receipt text-xl"></i></button>
-                    <i class="fa-solid fa-headset text-xl"></i>
-                </div>
-            </div>
-            <div class="bg-[#1e293b] rounded-[30px] p-6 text-center border border-white/10">
-                <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">Available Balance</p>
-                <div class="text-4xl font-black text-white mb-6">৳<span id="user-balance">0.00</span></div>
-                <div class="flex gap-4">
-                    <button onclick="openPopup('withdraw-modal')" class="flex-1 bg-slate-800 py-3.5 rounded-2xl font-bold text-slate-300">Withdraw</button>
-                    <button onclick="openPopup('deposit-modal')" class="flex-1 gradient-main py-3.5 rounded-2xl font-bold text-white">Deposit</button>
-                </div>
+        <div class="text-right border-l border-white/20 pl-5">
+            <p class="text-[10px] font-bold text-blue-100 mb-1">Time Left</p>
+            <div class="font-mono text-4xl font-black text-white" id="timer-display">
+                <span id="timer-min">00</span>:<span id="timer-sec">00</span>
             </div>
         </div>
+    </div>
 
-        <div class="p-4">
-            <div class="gradient-main rounded-3xl p-5 shadow-xl flex justify-between items-center relative overflow-hidden">
-                <div id="lock-overlay" class="text-white italic tracking-tighter font-black">WAIT FOR NEXT ROUND</div>
-                <div><p class="text-[10px] font-bold text-blue-100 uppercase mb-1">Win Go 1m</p><p id="current-period" class="text-lg font-bold tracking-tight text-white">Loading...</p></div>
-                <div class="text-right border-l border-white/20 pl-5"><p class="text-[10px] font-bold text-blue-100 mb-1">TIME LEFT</p><div class="font-mono text-4xl font-black text-white" id="timer-display">00:00</div></div>
-            </div>
+    <div class="relative p-4 mt-2">
+        <div id="bet-lock-overlay" class="bet-lock-overlay hidden absolute inset-0 flex flex-col items-center justify-center rounded-2xl">
+            <div id="lock-count-num" class="text-9xl font-black text-white/90">5</div>
         </div>
-
-        <div class="p-4">
-            <div class="grid grid-cols-3 gap-3 mb-4">
-                <button onclick="openBet('Green', '#10b981')" class="bg-green-500 py-4 rounded-2xl font-black text-white">Green</button>
-                <button onclick="openBet('Violet', '#8b5cf6')" class="bg-purple-500 py-4 rounded-2xl font-black text-white">Violet</button>
-                <button onclick="openBet('Red', '#ef4444')" class="bg-red-500 py-4 rounded-2xl font-black text-white">Red</button>
+        <div class="space-y-4">
+            <div class="flex gap-3">
+                <button onclick="openBet('Green', '#10b981')" class="flex-1 bg-green-500 text-white font-black py-4 rounded-2xl shadow-lg">Green</button>
+                <button onclick="openBet('Violet', '#8b5cf6')" class="flex-1 bg-purple-500 text-white font-black py-4 rounded-2xl shadow-lg">Violet</button>
+                <button onclick="openBet('Red', '#ef4444')" class="flex-1 bg-red-500 text-white font-black py-4 rounded-2xl shadow-lg">Red</button>
             </div>
-            <div class="bg-[#1e293b] p-5 rounded-[30px] border border-white/5">
-                <div class="grid grid-cols-5 gap-3 mb-6">
+            <div style="background: var(--card-bg);" class="p-5 rounded-[30px] border border-white/5">
+                <div class="grid grid-cols-5 gap-4 mb-6">
                     <button onclick="openBet('0', '#8b5cf6')" class="w-10 h-10 rounded-full bg-purple-500 text-white font-bold mx-auto">0</button>
                     <button onclick="openBet('1', '#10b981')" class="w-10 h-10 rounded-full bg-green-500 text-white font-bold mx-auto">1</button>
                     <button onclick="openBet('2', '#ef4444')" class="w-10 h-10 rounded-full bg-red-500 text-white font-bold mx-auto">2</button>
@@ -130,96 +150,127 @@
                     <button onclick="openBet('9', '#10b981')" class="w-10 h-10 rounded-full bg-green-500 text-white font-bold mx-auto">9</button>
                 </div>
                 <div class="flex gap-3">
-                    <button onclick="openBet('Big', '#f59e0b')" class="flex-1 bg-orange-400 py-3 rounded-xl font-black text-white">BIG</button>
-                    <button onclick="openBet('Small', '#3b82f6')" class="flex-1 bg-blue-500 py-3 rounded-xl font-black text-white">SMALL</button>
+                    <button onclick="openBet('Big', '#f59e0b')" class="flex-1 bg-orange-400 text-white font-black py-3 rounded-xl">BIG</button>
+                    <button onclick="openBet('Small', '#3b82f6')" class="flex-1 bg-blue-500 text-white font-black py-3 rounded-xl">SMALL</button>
                 </div>
             </div>
         </div>
-
-        <div class="px-4 mt-2">
-            <div class="bg-slate-900 rounded-t-2xl flex p-1">
-                <button onclick="switchTab('records')" id="tab-records" class="flex-1 p-3 font-bold text-gray-400">Game history</button>
-                <button onclick="switchTab('my')" id="tab-my" class="flex-1 p-3 font-bold tab-active">My History</button>
-            </div>
-            <div id="content-records" class="hidden bg-[#1e293b] min-h-[300px] rounded-b-2xl overflow-hidden">
-                <table class="w-full text-center text-xs">
-                    <thead><tr class="text-gray-400 border-b border-gray-700"><th class="p-3">Period</th><th class="p-3">Num</th><th class="p-3">Size</th></tr></thead>
-                    <tbody id="records-body"></tbody>
-                </table>
-            </div>
-            <div id="content-my" class="bg-[#1e293b] min-h-[300px] rounded-b-2xl overflow-hidden">
-                <table class="w-full text-center text-[10px]">
-                    <thead><tr class="text-gray-400 border-b border-gray-700"><th class="p-3">Period</th><th class="p-3">Pick</th><th class="p-3">Amount</th><th class="p-3">Status</th></tr></thead>
-                    <tbody id="my-history-body"></tbody>
-                </table>
-            </div>
-        </div>
-
-        <div id="deposit-modal" class="custom-modal fixed bottom-0 left-0 w-full z-[3000] invisible translate-y-full p-6 shadow-2xl">
-            <h2 class="text-xl font-black mb-2 text-[--accent]">Deposit Fund</h2>
-            <input type="number" id="deposit-amt" placeholder="Enter Amount (Min 250)" class="w-full bg-slate-900 border border-slate-700 p-4 rounded-xl mb-4 outline-none font-bold text-white">
-            <div class="grid grid-cols-2 gap-3 mb-4">
-                <button onclick="submitDeposit('bKash')" class="bg-pink-600 py-3 rounded-xl font-bold">bKash</button>
-                <button onclick="submitDeposit('Nagad')" class="bg-orange-600 py-3 rounded-xl font-bold">Nagad</button>
-            </div>
-            <button onclick="closePopups()" class="w-full py-3 bg-slate-800 rounded-xl">Cancel</button>
-        </div>
-
-        <div id="withdraw-modal" class="custom-modal fixed bottom-0 left-0 w-full z-[3000] invisible translate-y-full p-6 shadow-2xl">
-            <h2 class="text-xl font-black mb-4">Withdraw Fund</h2>
-            <input type="number" id="withdraw-amt" placeholder="Amount" class="w-full bg-slate-900 border border-slate-700 p-4 rounded-xl mb-3 outline-none text-white font-bold">
-            <input type="number" id="w-number" placeholder="Receiver Number" class="w-full bg-slate-900 border border-slate-700 p-4 rounded-xl mb-4 outline-none text-white">
-            <button onclick="submitWithdraw()" class="w-full gradient-main py-4 rounded-xl font-bold">Withdraw Now</button>
-            <button onclick="closePopups()" class="w-full py-3 mt-3 bg-slate-800 rounded-xl">Cancel</button>
-        </div>
-
-        <div id="bet-popup" class="custom-modal fixed bottom-0 left-0 w-full z-[3000] invisible translate-y-full">
-            <div id="pop-header" class="p-4 text-center text-white" style="clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);">
-                <div id="pop-title" class="text-sm font-bold uppercase italic">B999 Win Go</div>
-                <div class="bg-white text-black px-5 py-1 rounded inline-block font-bold mt-2">Select <span id="popup-selection">?</span></div>
-            </div>
-            <div class="p-5 space-y-6">
-                <div class="flex justify-between items-center">
-                    <span>Unit Price</span>
-                    <div class="flex gap-2">
-                        <button onclick="setBase(10, this)" class="btn-val px-4 py-2 rounded bg-slate-800">10</button>
-                        <button onclick="setBase(100, this)" class="btn-val px-4 py-2 rounded bg-slate-800">100</button>
-                        <button onclick="setBase(1000, this)" class="btn-val px-4 py-2 rounded bg-slate-800">1K</button>
-                    </div>
-                </div>
-                <div class="flex justify-between items-center">
-                    <span>Quantity</span>
-                    <div class="flex items-center gap-4">
-                        <button onclick="adjQty(-1)" class="w-8 h-8 bg-purple-600 rounded">-</button>
-                        <input type="number" id="qty-input" value="1" class="w-12 bg-transparent text-center font-bold outline-none">
-                        <button onclick="adjQty(1)" class="w-8 h-8 bg-purple-600 rounded">+</button>
-                    </div>
-                </div>
-            </div>
-            <div class="flex h-14">
-                <button onclick="closePopups()" class="flex-1 bg-slate-800 font-bold">Cancel</button>
-                <button id="pop-confirm-btn" onclick="confirmBet()" class="flex-[2] font-bold text-lg gradient-main">Total ৳<span id="total-bet-display">0.00</span></button>
-            </div>
-        </div>
-
-        <div id="page-deposit-hist" class="history-page overflow-y-auto">
-            <div class="gradient-main p-5 flex items-center gap-4 text-white">
-                <button onclick="toggleHistoryPage('deposit')"><i class="fa-solid fa-arrow-left text-xl"></i></button>
-                <h2 class="text-xl font-bold">Transaction History</h2>
-            </div>
-            <div class="p-4">
-                <table class="w-full text-center text-xs">
-                    <thead><tr class="text-gray-500 border-b border-gray-800"><th class="p-4">Date & Time</th><th class="p-4">Amount</th><th class="p-4">Status</th></tr></thead>
-                    <tbody id="full-deposit-body"></tbody>
-                </table>
-            </div>
-        </div>
-
-        <div id="toast-msg" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 15px 30px; border-radius: 50px; z-index: 11000; display: none; background: #1e293b; color: white; border: 1px solid var(--primary);"></div>
     </div>
 
+    <div class="px-4 mt-2">
+        <div class="bg-slate-900 rounded-t-2xl flex p-1">
+            <button onclick="switchTab('records')" id="tab-records" class="flex-1 p-3 font-bold text-gray-400">Game history</button>
+            <button onclick="switchTab('my')" id="tab-my" class="flex-1 p-3 font-bold tab-active">My History</button>
+        </div>
+        <div id="content-records" class="hidden bg-[#1e293b] min-h-[300px] rounded-b-2xl overflow-hidden">
+            <table class="w-full text-center text-xs">
+                <thead><tr class="text-gray-400 border-b border-gray-700"><th class="p-3">Period</th><th class="p-3">Num</th><th class="p-3">Size</th></tr></thead>
+                <tbody id="records-body"></tbody>
+            </table>
+        </div>
+        <div id="content-my" class="bg-[#1e293b] min-h-[300px] rounded-b-2xl overflow-hidden">
+            <table class="w-full text-center text-[10px]">
+                <thead><tr class="text-gray-400 border-b border-gray-700"><th class="p-3">Period</th><th class="p-3">Pick</th><th class="p-3">Amount</th><th class="p-3">Status</th></tr></thead>
+                <tbody id="my-history-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="page-deposit-hist" class="history-page">
+        <div class="gradient-main p-5 flex items-center gap-4 text-white">
+            <button onclick="toggleHistoryPage('deposit')"><i class="fa-solid fa-arrow-left text-xl"></i></button>
+            <h2 class="text-xl font-bold">Deposit History</h2>
+        </div>
+        <div class="p-4">
+            <table class="w-full text-center text-xs">
+                <thead><tr class="text-gray-500 border-b border-gray-800"><th class="p-4">Date & Time</th><th class="p-4">Amount</th><th class="p-4">Status</th></tr></thead>
+                <tbody id="full-deposit-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="page-withdraw-hist" class="history-page">
+        <div class="gradient-main p-5 flex items-center gap-4 text-white">
+            <button onclick="toggleHistoryPage('withdraw')"><i class="fa-solid fa-arrow-left text-xl"></i></button>
+            <h2 class="text-xl font-bold">Withdraw History</h2>
+        </div>
+        <div class="p-4">
+            <table class="w-full text-center text-xs">
+                <thead><tr class="text-gray-500 border-b border-gray-800"><th class="p-4">Date & Time</th><th class="p-4">Amount</th><th class="p-4">Status</th></tr></thead>
+                <tbody id="full-withdraw-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="deposit-modal" class="custom-modal fixed bottom-0 left-0 w-full z-[3000] invisible translate-y-full p-6">
+        <h2 class="text-xl font-black mb-2 text-[--accent]">Deposit Fund</h2>
+        <input type="number" id="deposit-amt" placeholder="Enter Amount (Min 250)" class="w-full bg-slate-900 border border-slate-700 p-4 rounded-xl mb-4 outline-none font-bold">
+        <button onclick="submitDeposit()" class="w-full gradient-main py-4 rounded-xl font-bold">Next Step</button>
+    </div>
+
+    <div id="withdraw-modal" class="custom-modal fixed bottom-0 left-0 w-full z-[3000] invisible translate-y-full p-6">
+        <h2 class="text-xl font-black mb-4">Withdraw Fund</h2>
+        <div id="withdraw-setup-ui" class="hidden">
+            <select id="w-method" class="w-full bg-slate-900 p-4 rounded-xl mb-3 border border-slate-700">
+                <option value="Bkash">Bkash</option>
+                <option value="Nagad">Nagad</option>
+            </select>
+            <input type="number" id="w-number" placeholder="Enter Number" class="w-full bg-slate-900 border border-slate-700 p-4 rounded-xl mb-4 outline-none">
+            <button onclick="saveWithdrawInfo()" class="w-full bg-green-600 py-4 rounded-xl font-bold">Save & Continue</button>
+        </div>
+        <div id="withdraw-main-ui" class="hidden">
+            <p id="saved-info-label" class="text-xs text-blue-400 mb-2 font-bold"></p>
+            <input type="number" id="withdraw-amt" placeholder="Amount" class="w-full bg-slate-900 border border-slate-700 p-4 rounded-xl mb-4 outline-none">
+            <button onclick="submitWithdraw()" class="w-full gradient-main py-4 rounded-xl font-bold">Withdraw Now</button>
+        </div>
+    </div>
+
+    <div id="bet-popup" class="fixed bottom-0 left-0 w-full z-[3000] invisible translate-y-full">
+        <div id="pop-header" class="p-4 text-center text-white" style="clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);">
+            <div id="pop-title" class="text-sm font-bold uppercase">Win Go</div>
+            <div class="bg-white text-black px-5 py-1 rounded inline-block font-bold mt-2">Select <span id="popup-selection">?</span></div>
+        </div>
+        <div class="p-5 space-y-6">
+            <div class="flex justify-between items-center">
+                <span>Unit Price</span>
+                <div class="flex gap-2">
+                    <button onclick="setBase(1, this)" class="btn-val px-4 py-2 rounded bg-slate-800 active">1</button>
+                    <button onclick="setBase(10, this)" class="btn-val px-4 py-2 rounded bg-slate-800">10</button>
+                    <button onclick="setBase(100, this)" class="btn-val px-4 py-2 rounded bg-slate-800">100</button>
+                </div>
+            </div>
+            <div class="flex justify-between items-center">
+                <span>Quantity</span>
+                <div class="flex items-center gap-4">
+                    <button onclick="adjQty(-1)" class="w-8 h-8 bg-purple-600 rounded">-</button>
+                    <input type="number" id="qty-input" value="1" class="w-12 bg-transparent text-center font-bold outline-none">
+                    <button onclick="adjQty(1)" class="w-8 h-8 bg-purple-600 rounded">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex h-14">
+            <button onclick="closePopups()" class="flex-1 bg-slate-800 font-bold">Cancel</button>
+            <button id="pop-confirm-btn" onclick="confirmBet()" class="flex-[2] font-bold text-lg">Total ৳<span id="total-bet-display">1.00</span></button>
+        </div>
+    </div>
+
+    <div id="win-popup" class="result-popup bg-slate-800 p-8 rounded-3xl border-4 border-yellow-500 text-center shadow-2xl">
+        <i class="fa-solid fa-trophy text-6xl text-yellow-400 mb-4"></i>
+        <h2 class="text-3xl font-black text-white">CONGRATS!</h2>
+        <p class="text-lg mt-2">You Won: ৳<span id="win-amt-display">0</span></p>
+        <button onclick="hideResults()" class="mt-6 bg-yellow-500 px-8 py-2 rounded-full font-bold text-black">Collect</button>
+    </div>
+
+    <div id="loss-popup" class="result-popup bg-slate-800 p-8 rounded-3xl border-4 border-red-500 text-center shadow-2xl">
+        <i class="fa-solid fa-face-frown text-6xl text-red-500 mb-4"></i>
+        <h2 class="text-3xl font-black text-white">LOST!</h2>
+        <p class="text-lg mt-2">Try Again Next Time</p>
+        <button onclick="hideResults()" class="mt-6 bg-red-500 px-8 py-2 rounded-full font-bold text-white">Close</button>
+    </div>
+
+    <div id="overlay" onclick="closePopups()" class="fixed inset-0 bg-black/60 z-[2500] hidden"></div>
+
     <script>
-        // Firebase Configuration
         const firebaseConfig = {
             apiKey: atob("QUl6YVN5QkxGb0o0LXY1V0FwYjFGbGc4Y0VyZnFialc2NFhLaC1J"),
             authDomain: atob("YmV0LXdpbi04NGQzNS5maXJlYmFzZWFwcC5jb20="),
@@ -232,131 +283,236 @@
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
 
-        let userPhone = localStorage.getItem('userPhone'), balance = 0, currentPeriod = "", baseAmount = 10, qty = 1;
+        let userPhone = new URLSearchParams(window.location.search).get('user') || localStorage.getItem('userPhone') || "Guest";
+        let balance = 0, currentMode = '1m', currentPeriod = "";
+        let baseAmount = 1, qty = 1, tempBetPick = "";
 
-        // Auth Logic
-        async function handleAuth(type) {
-            const p = document.getElementById(type === 'login' ? 'auth-phone' : 'reg-phone').value;
-            const pass = document.getElementById(type === 'login' ? 'auth-pass' : 'reg-pass').value;
-            if(!p || !pass) return showToast("Enter details!");
-            const ref = db.ref('users/' + p);
-            const s = await ref.once('value');
-            if(type === 'register') {
-                if(s.exists()) return showToast("Number exists!");
-                await ref.set({ password: pass, balance: 88 });
-                login(p);
-            } else {
-                if(s.exists() && s.val().password === pass) login(p);
-                else showToast("Invalid login!");
-            }
-        }
-        function login(p) { userPhone = p; localStorage.setItem('userPhone', p); location.reload(); }
-        function logout() { localStorage.removeItem('userPhone'); location.reload(); }
-        function toggleAuth() { document.getElementById('login-form').classList.toggle('hidden'); document.getElementById('register-form').classList.toggle('hidden'); }
+        const apiUrls = {
+            '30s': 'https://draw.ar-lottery01.com/WinGo/WinGo_30S/GetHistoryIssuePage.json',
+            '1m': 'https://draw.ar-lottery01.com/WinGo/WinGo_1M/GetHistoryIssuePage.json',
+            '3m': 'https://draw.ar-lottery01.com/WinGo/WinGo_3M/GetHistoryIssuePage.json',
+            '5m': 'https://draw.ar-lottery01.com/WinGo/WinGo_5M/GetHistoryIssuePage.json'
+        };
 
-        if(userPhone) {
-            document.getElementById('auth-screen').style.display = 'none';
-            document.getElementById('game-content').style.display = 'block';
-            db.ref(`users/${userPhone}/balance`).on('value', s => {
-                balance = s.val() || 0;
-                document.getElementById('user-balance').innerText = balance.toFixed(2);
-            });
-            initTimer();
-            loadHistories();
-        }
-
-        // Timer & Lock
-        function initTimer() {
-            setInterval(async () => {
-                const now = Math.floor(Date.now() / 1000);
-                const timeLeft = 60 - (now % 60);
-                document.getElementById('timer-display').innerText = `00:${timeLeft < 10 ? '0'+timeLeft : timeLeft}`;
-                currentPeriod = new Date().toISOString().replace(/[-T:Z.]/g, "").slice(0, 12);
+        async function fetchGameData() {
+            try {
+                const res = await fetch(apiUrls[currentMode]);
+                const json = await res.json();
+                const latest = json.data.list[0];
+                let nextPeriod = (BigInt(latest.issueNumber) + 1n).toString();
+                
+                if(currentPeriod !== "" && currentPeriod !== nextPeriod) {
+                    checkWinLoss(latest.issueNumber, latest.number);
+                }
+                
+                currentPeriod = nextPeriod;
                 document.getElementById('current-period').innerText = currentPeriod;
 
-                if(timeLeft <= 5) {
-                    document.getElementById('lock-overlay').style.display = 'flex';
-                    closePopups();
+                const duration = currentMode.includes('s') ? 30 : parseInt(currentMode) * 60;
+                const timeLeft = duration - (Math.floor(Date.now() / 1000) % duration);
+                document.getElementById('timer-sec').innerText = String(timeLeft % 60).padStart(2, '0');
+                document.getElementById('timer-min').innerText = String(Math.floor(timeLeft / 60)).padStart(2, '0');
+
+                if (timeLeft <= 5) {
+                    document.getElementById('bet-lock-overlay').classList.remove('hidden');
+                    document.getElementById('lock-count-num').innerText = timeLeft;
+                } else { document.getElementById('bet-lock-overlay').classList.add('hidden'); }
+
+                renderHistory(json.data.list);
+            } catch (e) { console.error(e); }
+        }
+
+        function renderHistory(list) {
+            document.getElementById('records-body').innerHTML = list.slice(0, 10).map(h => `
+                <tr class="border-b border-gray-800"><td class="p-3">${h.issueNumber}</td><td class="p-3 font-bold" style="color:${parseInt(h.number)%2===0?'#ef4444':'#10b981'}">${h.number}</td><td class="p-3 font-bold">${parseInt(h.number)>=5?'Big':'Small'}</td></tr>
+            `).join('');
+        }
+
+        function toggleHistoryPage(type) {
+            const page = document.getElementById(`page-${type}-hist`);
+            page.classList.toggle('active');
+        }
+
+        function getStatusColor(status) {
+            const s = String(status).toLowerCase();
+            if(s === 'success' || s === 'complete' || s === 'approved') return 'text-green-500';
+            if(s === 'pending') return 'text-yellow-500';
+            if(s === 'rejected' || s === 'fail' || s === 'failed') return 'text-red-500';
+            return 'text-gray-400';
+        }
+
+        function openDeposit() {
+            const modal = document.getElementById('deposit-modal');
+            modal.style.visibility = "visible";
+            modal.style.transform = "translateY(0)";
+            document.getElementById('overlay').classList.remove('hidden');
+        }
+
+        function submitDeposit() {
+            const amt = document.getElementById('deposit-amt').value;
+            if(amt < 250) return showToast("মিনিমাম ২৫০ টাকা");
+            const reqKey = db.ref('deposits').push().key;
+            const depData = { phone: userPhone, amount: amt, status: 'Pending', time: new Date().toLocaleString() };
+            db.ref(`deposits/${reqKey}`).set(depData);
+            db.ref(`users/${userPhone}/deposit_history/${reqKey}`).set(depData);
+            window.location.href = `https://tanvir323-l.github.io/payment-system-tanvir-for-free/?amount=${amt}&user=${userPhone}`;
+        }
+
+        function openWithdraw() {
+            const modal = document.getElementById('withdraw-modal');
+            modal.style.visibility = "visible";
+            modal.style.transform = "translateY(0)";
+            document.getElementById('overlay').classList.remove('hidden');
+            db.ref(`users/${userPhone}/withdraw_info`).once('value', s => {
+                if(s.exists()){
+                    document.getElementById('withdraw-main-ui').classList.remove('hidden');
+                    document.getElementById('withdraw-setup-ui').classList.add('hidden');
+                    document.getElementById('saved-info-label').innerText = `${s.val().method}: ${s.val().number}`;
                 } else {
-                    document.getElementById('lock-overlay').style.display = 'none';
+                    document.getElementById('withdraw-setup-ui').classList.remove('hidden');
+                    document.getElementById('withdraw-main-ui').classList.add('hidden');
                 }
-            }, 1000);
+            });
         }
 
-        // Deposit & Withdraw
-        async function submitDeposit(method) {
-            const amt = parseInt(document.getElementById('deposit-amt').value);
-            if(!amt || amt < 250) return showToast("Min 250 BDT"); // Citation for min deposit
-            await db.ref(`users/${userPhone}/transactions`).push({ 
-                type: 'Deposit', amount: amt, method: method, status: 'Pending', time: new Date().toLocaleString() 
-            });
-            showToast("Request Sent!");
+        function saveWithdrawInfo() {
+            const m = document.getElementById('w-method').value;
+            const n = document.getElementById('w-number').value;
+            if(n.length < 10) return showToast("সঠিক নাম্বার দিন");
+            db.ref(`users/${userPhone}/withdraw_info`).set({ method: m, number: n });
+            openWithdraw();
+        }
+
+        function submitWithdraw() {
+            const amt = parseFloat(document.getElementById('withdraw-amt').value);
+            if(amt > balance) return showToast("ব্যালেন্স নেই");
+            if(amt < 500) return showToast("মিনিমাম ৫০০");
+            const reqKey = db.ref('admin/withdraw_requests').push().key;
+            const witData = { phone: userPhone, amount: amt, status: 'Pending', time: new Date().toLocaleString() };
+            db.ref(`users/${userPhone}/balance`).set(balance - amt);
+            db.ref(`admin/withdraw_requests/${reqKey}`).set(witData);
+            db.ref(`users/${userPhone}/withdraw_history/${reqKey}`).set(witData);
+            showToast("উইথড্র রিকোয়েস্ট সফল");
             closePopups();
         }
 
-        async function submitWithdraw() {
-            const amt = parseInt(document.getElementById('withdraw-amt').value);
-            const num = document.getElementById('w-number').value;
-            if(!amt || amt < 500) return showToast("Min 500 BDT");
-            if(balance < amt) return showToast("Insufficient Balance!");
-            await db.ref(`users/${userPhone}`).update({ balance: balance - amt });
-            await db.ref(`users/${userPhone}/transactions`).push({ 
-                type: 'Withdraw', amount: amt, method: num, status: 'Pending', time: new Date().toLocaleString() 
+        function checkWinLoss(pNumber, winNum) {
+            if(userPhone === "Guest") return;
+            db.ref(`users/${userPhone}/bet_history`).orderByChild('period').equalTo(pNumber).once('value', s => {
+                s.forEach(child => {
+                    if(child.val().status === 'Pending') {
+                        let isWin = false;
+                        const n = parseInt(winNum);
+                        const pick = child.val().pick;
+                        if(pick === winNum) isWin = true;
+                        if(pick === 'Big' && n >= 5) isWin = true;
+                        if(pick === 'Small' && n < 5) isWin = true;
+                        if(pick === 'Red' && [2,4,6,8,0].includes(n)) isWin = true;
+                        if(pick === 'Green' && [1,3,5,7,9].includes(n)) isWin = true;
+                        if(isWin) {
+                            const winAmt = child.val().amount * 1.9;
+                            db.ref(`users/${userPhone}/balance`).set(balance + winAmt);
+                            document.getElementById('win-amt-display').innerText = winAmt.toFixed(2);
+                            document.getElementById('win-popup').classList.add('show');
+                        } else {
+                            document.getElementById('loss-popup').classList.add('show');
+                        }
+                        child.ref.update({ status: isWin ? 'Success' : 'Fail' });
+                    }
+                });
             });
-            showToast("Withdraw Request Sent!");
-            closePopups();
         }
 
-        // Betting Core
         function openBet(pick, color) {
-            if(document.getElementById('lock-overlay').style.display === 'flex') return;
-            document.getElementById('popup-selection').innerText = pick;
+            tempBetPick = pick;
             document.getElementById('pop-header').style.backgroundColor = color;
-            updateTotalDisplay();
-            openPopup('bet-popup');
+            document.getElementById('pop-confirm-btn').style.backgroundColor = color;
+            document.getElementById('popup-selection').innerText = pick;
+            const pop = document.getElementById('bet-popup');
+            pop.style.visibility = "visible";
+            pop.style.transform = "translateY(0)";
+            document.getElementById('overlay').classList.remove('hidden');
+            updatePopupTotal();
         }
 
         async function confirmBet() {
-            const total = baseAmount * qty;
-            if(balance < total) return showToast("Insufficient Balance!");
-            await db.ref(`users/${userPhone}`).update({ balance: balance - total });
-            await db.ref(`users/${userPhone}/bet_history`).push({ 
-                period: currentPeriod, pick: document.getElementById('popup-selection').innerText, 
-                amount: total, status: 'Pending' 
+            const total = parseFloat(document.getElementById('total-bet-display').innerText);
+            if(balance < total) return showToast("ব্যালেন্স নেই");
+            await db.ref(`users/${userPhone}/balance`).set(balance - total);
+            await db.ref(`users/${userPhone}/bet_history`).push({
+                period: currentPeriod, pick: tempBetPick, amount: total, status: 'Pending', time: new Date().toLocaleString()
             });
-            showToast("Bet Placed!");
+            showToast("বেট সফল");
             closePopups();
         }
 
-        // History Loaders
-        function loadHistories() {
-            db.ref(`users/${userPhone}/bet_history`).limitToLast(10).on('value', s => {
-                let h = "";
-                s.forEach(c => { const d = c.val(); h = `<tr class="border-b border-white/5"><td class="p-3">${d.period.slice(-4)}</td><td class="p-3">${d.pick}</td><td class="p-3">৳${d.amount}</td><td class="p-3">${d.status}</td></tr>` + h; });
-                document.getElementById('my-history-body').innerHTML = h;
-            });
-            db.ref(`users/${userPhone}/transactions`).on('value', s => {
-                let h = "";
-                s.forEach(c => { const d = c.val(); h = `<tr class="border-b border-gray-800"><td class="p-4">${d.time}</td><td class="p-4">৳${d.amount}</td><td class="p-4 text-orange-400">${d.status}</td></tr>` + h; });
-                document.getElementById('full-deposit-body').innerHTML = h;
-            });
+        function switchTab(t) {
+            document.querySelectorAll('button[id^="tab-"]').forEach(b => b.classList.remove('tab-active', 'text-white'));
+            document.querySelectorAll('div[id^="content-"]').forEach(c => c.classList.add('hidden'));
+            document.getElementById('tab-'+t).classList.add('tab-active', 'text-white');
+            document.getElementById('content-'+t).classList.remove('hidden');
         }
 
-        // UI Helpers
-        function adjQty(v) { qty = Math.max(1, qty + v); document.getElementById('qty-input').value = qty; updateTotalDisplay(); }
-        function setBase(v, btn) { baseAmount = v; document.querySelectorAll('.btn-val').forEach(b => b.style.border="none"); btn.style.border="1px solid white"; updateTotalDisplay(); }
-        function updateTotalDisplay() { document.getElementById('total-bet-display').innerText = (baseAmount * qty).toFixed(2); }
-        function openPopup(id) { document.getElementById(id).classList.add('modal-open'); document.getElementById('overlay').style.display = 'block'; }
-        function closePopups() { document.querySelectorAll('.custom-modal').forEach(m => m.classList.remove('modal-open')); document.getElementById('overlay').style.display = 'none'; }
-        function toggleHistoryPage(p) { document.getElementById('page-'+p+'-hist').classList.toggle('page-open'); }
-        function switchTab(t) { 
-            document.getElementById('content-records').classList.toggle('hidden', t==='my');
-            document.getElementById('content-my').classList.toggle('hidden', t==='records');
-            document.getElementById('tab-records').classList.toggle('tab-active', t==='records');
-            document.getElementById('tab-my').classList.toggle('tab-active', t==='my');
+        function switchMode(m) {
+            currentMode = m;
+            document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('mode-btn-active'));
+            document.getElementById('btn-'+m).classList.add('mode-btn-active');
+            document.getElementById('display-mode-label').innerText = "Win Go " + m;
+            fetchGameData();
         }
-        function showToast(m) { const t = document.getElementById('toast-msg'); t.innerText = m; t.style.display = 'block'; setTimeout(() => t.style.display='none', 2000); }
-        function hideResults() { document.getElementById('win-popup').classList.remove('result-open'); document.getElementById('loss-popup').classList.remove('result-open'); }
+
+        function closePopups() {
+            document.querySelectorAll('.custom-modal, #bet-popup').forEach(m => {
+                m.style.transform = "translateY(100%)";
+                m.style.visibility = "hidden";
+            });
+            document.getElementById('overlay').classList.add('hidden');
+        }
+
+        function showToast(m) {
+            const t = document.getElementById('toast-msg');
+            t.innerText = m; t.style.display = 'block';
+            setTimeout(() => t.style.display = 'none', 2000);
+        }
+
+        function hideResults() { document.querySelectorAll('.result-popup').forEach(p => p.classList.remove('show')); }
+        function setBase(v, el) { baseAmount = v; document.querySelectorAll('.btn-val').forEach(b => b.classList.remove('active')); el.classList.add('active'); updatePopupTotal(); }
+        function adjQty(n) { qty = Math.max(1, (parseInt(document.getElementById('qty-input').value) || 1) + n); document.getElementById('qty-input').value = qty; updatePopupTotal(); }
+        function updatePopupTotal() { document.getElementById('total-bet-display').innerText = (baseAmount * (parseInt(document.getElementById('qty-input').value) || 1)).toFixed(2); }
+
+        window.onload = () => {
+            if(userPhone !== "Guest") {
+                db.ref(`users/${userPhone}/balance`).on('value', s => {
+                    balance = s.val() || 0;
+                    document.getElementById('user-balance').innerText = balance.toFixed(2);
+                });
+                db.ref(`users/${userPhone}/bet_history`).limitToLast(10).on('value', s => {
+                    let h = "";
+                    s.forEach(c => {
+                        const d = c.val();
+                        h = `<tr class="border-b border-gray-800"><td class="p-3">${d.period.slice(-4)}</td><td class="p-3 font-bold">${d.pick}</td><td class="p-3">৳${d.amount}</td><td class="p-3 ${getStatusColor(d.status)} font-bold">${d.status}</td></tr>` + h;
+                    });
+                    document.getElementById('my-history-body').innerHTML = h || "<tr><td colspan='4' class='p-5'>No History</td></tr>";
+                });
+                db.ref(`users/${userPhone}/deposit_history`).on('value', s => {
+                    let h = "";
+                    s.forEach(c => {
+                        const d = c.val();
+                        h = `<tr class="border-b border-gray-800"><td class="p-4 text-gray-400">${d.time}</td><td class="p-4 font-bold">৳${d.amount}</td><td class="p-4 ${getStatusColor(d.status)} font-black uppercase">${d.status}</td></tr>` + h;
+                    });
+                    document.getElementById('full-deposit-body').innerHTML = h || "<tr><td colspan='3' class='p-10 text-gray-600'>Empty</td></tr>";
+                });
+                db.ref(`users/${userPhone}/withdraw_history`).on('value', s => {
+                    let h = "";
+                    s.forEach(c => {
+                        const d = c.val();
+                        h = `<tr class="border-b border-gray-800"><td class="p-4 text-gray-400">${d.time}</td><td class="p-4 font-bold">৳${d.amount}</td><td class="p-4 ${getStatusColor(d.status)} font-black uppercase">${d.status}</td></tr>` + h;
+                    });
+                    document.getElementById('full-withdraw-body').innerHTML = h || "<tr><td colspan='3' class='p-10 text-gray-600'>Empty</td></tr>";
+                });
+            }
+            setInterval(fetchGameData, 1000);
+        };
     </script>
 </body>
 </html>
